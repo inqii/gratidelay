@@ -2,7 +2,7 @@
   "name": "Marshmellow",
   "version": "1.0",
   "description": "Delay gratifcation and collect marshmellows!",
-  "permissions": ["activeTab", "tabs", "storage"],
+  "permissions": ["activeTab", "tabs", "storage", "*://*/*"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
