@@ -3,7 +3,7 @@
   "version": "1.0",
   "description": "Delay gratifcation and collect marshmellows!",
   "permissions": ["activeTab", "declarativeContent", "storage"],
-  "page_action": {
+  "browser_action": {
     "default_icon": {
       "16": "images/marshmellow-icon-16.png",
       "32": "images/marshmellow-icon-32.png",
