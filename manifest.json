@@ -1,7 +1,7 @@
 {
   "name": "Gratidelay",
-  "version": "1.0",
-  "description": "Delay instant gratifcation with this simple extension",
+  "version": "0.1",
+  "description": "A simple chrome extension using the concept of delayed gratification to fight bad habits",
   "permissions": ["activeTab", "tabs", "storage"],
   "background": {
     "scripts": ["background.js"],
