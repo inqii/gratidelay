@@ -2,6 +2,7 @@
   "name": "Gratidelay",
   "version": "1.0",
   "description": "Delay instant gratifcation with this simple extension",
+  "permissions": ["activeTab", "tabs", "storage"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
@@ -20,6 +21,10 @@
     "48": "images/gratidelay-icon-48.png",
     "128": "images/gratidelay-icon-128.png"
   },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }],
   "options_page": "options.html",
   "manifest_version": 2
 }
