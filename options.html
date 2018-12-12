@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <script src="/options.js"></script>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/mustard-ui.min.css" />
+    <link rel="stylesheet" href="/css/options.css" />
+  </head>
 
-<head>
-  <style>
-    html {
-      background-color: #E44D42;
-    }
-  </style>
-  <script src="options.js"></script>
-</head>
+  <body>
+    <div class="main">
+      <div class="intro">
+        <h1 class="intro__title">Gratidelay</h1>
+        <p class="intro__describition">
+          It's 2018 and everthing is a click away. While it has several
+          benefits, it also creates bad habits. With Gratidelay, you can delay
+          the opening of websites and therefore deminish the instant
+          gratifcation that normally triggers your mind.
+        </p>
+      </div>
 
-<body>
+      <div class="form">
+        <input
+          class="form__input"
+          type="text"
+          placeholder="Website url (e.g facebook.com)"
+        />
+        <button class="button-primary form__button form__button--disabled">
+          Add url
+        </button>
+      </div>
 
-</body>
-
+      <table class="block-list">
+        <tbody>
+          <tr class="block-list__entry">
+            <td> <p>facebook.com</p></td>
+            <td>
+              <button class="remove-button button-danger button-small">Remove</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
 </html>
