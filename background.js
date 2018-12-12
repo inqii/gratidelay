@@ -34,6 +34,13 @@ chrome.browserAction.onClicked.addListener(function (tab) {
   openOrFocusOptionsPage();
 });
 
+chrome.runtime.onInstalled.addListener(function() {
+  let blockList = [];
+  chrome.storage.sync.set({blockList: blockList}, function() {
+    console.log(blockList);
+  });
+});
+
 // List of sites to delay
 let delaylist = ["amazon.com", "instagram.com", "example.com", "http://example.com/"]
 

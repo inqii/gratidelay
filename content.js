@@ -1,4 +1,3 @@
-
 const extractingOverlay = () => {
   const overlay = document.getElementById("overlay");
   console.log(overlay);
@@ -56,20 +55,24 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 
       const countdown = (sec) => {
         let timeRemaining = sec;
+        let countdownFinished = false;
 
         const calculate = () => {
           if (timeRemaining >= 0) {
             document.getElementById("overlay-countdown").innerHTML = timeRemaining;
             timeRemaining -= 1;
+            setTimeout(calculate, 1000);
           } else {
             extractingOverlay();
+            countdownFinished = true;
             return;
           }
         }
-        setInterval(calculate, 1000);
+
+        setTimeout(calculate, 1000);
 
         el = document.getElementsByClassName("bg-red");
-        window.setTimeout( function() {
+        window.setTimeout(function () {
           el[0].className = "bg-green";
         }, 100);
       }
